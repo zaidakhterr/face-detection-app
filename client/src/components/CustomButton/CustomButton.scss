@@ -1,0 +1,41 @@
+@import '../../partialStyles/colorVariables';
+
+.btn {
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  min-width: 100px;
+  border-radius: 1px;
+  padding: 9px 23px;
+  transition: all 200ms;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.primary {
+    color: white;
+    background-color: $primary1;
+
+    &:hover {
+      background-color: $primary2;
+    }
+  }
+
+  &.dark {
+    color: white;
+    background-color: $dark1;
+
+    &:hover {
+      background-color: $dark2;
+    }
+  }
+
+  &.cancel {
+    color: white;
+    background-color: $cancel1;
+
+    &:hover {
+      background-color: $cancel2;
+    }
+  }
+}

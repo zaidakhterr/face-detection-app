@@ -1,0 +1,29 @@
+@keyframes drop {
+  0% {
+    transform: translateY(-100%);
+  }
+  80% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes jiggle {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, 0px) rotate(-10deg);
+  }
+  50% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  75% {
+    transform: translate(1px, -1px) rotate(10deg);
+  }
+  100% {
+    transform: translate(0px, 1px) rotate(5deg);
+  }
+}

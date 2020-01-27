@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap');
+@import './partialStyles/colorVariables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 500;
+}
+
+// reset default button styles
+button {
+  cursor: pointer;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+  text-align: center;
+}
+
+// reset default link styles
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+  transition: color 200ms;
+
+  &:link {
+    color: #000;
+  }
+
+  &:visited {
+    color: #000;
+  }
+
+  &:active {
+    color: #000;
+  }
+
+  &:hover {
+    color: $primary1;
+  }
+}
+
+.app {
+  margin-top: 70px;
+  padding: 0 20px;
+  height: calc(100vh - 70px);
+  width: 100vw;
+}
+
+#skip-link {
+  text-align: center;
+  padding: 5px;
+  top: -30px;
+  text-decoration: none;
+  color: #fff;
+  background-color: $primary1;
+  border-radius: 15px;
+  width: 170px;
+  height: 30px;
+  position: absolute;
+  margin-right: -85px;
+  right: 50%;
+  transition: all 200ms;
+  z-index: 1000;
+
+  &:focus {
+    top: 5px;
+  }
+}
+
+@media (max-width: 850px) {
+  .app {
+    padding: 0;
+  }
+}

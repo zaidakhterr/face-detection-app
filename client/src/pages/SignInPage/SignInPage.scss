@@ -1,0 +1,91 @@
+@import '../../partialStyles/colorVariables';
+@import '../../partialStyles/background';
+@import '../../partialStyles/animations';
+
+.signin-page {
+  height: calc(100vh - 70px);
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 5fr 5fr;
+  grid-template-areas:
+    'h1 h1'
+    'in up'
+    'in up';
+  gap: 30px;
+
+  .background {
+    //@include background(url('../assets/people_background.jpg'));
+    width: 100vw;
+    height: calc(100vh - 70px);
+    position: fixed;
+    top: 70px;
+    left: 0;
+    background-color: rgba($primary1, 0.9);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+    z-index: -100;
+  }
+
+  h1 {
+    text-align: center;
+    position: relative;
+    font-size: 2rem;
+    margin-top: 20px;
+    grid-area: h1;
+    color: #fff;
+    //background-color: rgba($dark2, 0.4);
+    //min-height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+
+    &::after {
+      content: '';
+      background-image: linear-gradient(to right, rgba(#fff, 0.8), transparent);
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      bottom: -5px;
+      left: -2px;
+    }
+  }
+
+  .form {
+    height: 500px;
+    justify-self: center;
+    align-self: start;
+    animation: drop 600ms;
+  }
+
+  .signin-form {
+    grid-area: in;
+  }
+
+  .signup-form {
+    grid-area: up;
+  }
+}
+
+@media (max-width: 850px) {
+  .signin-page {
+    grid-template-areas:
+      'h1 h1'
+      'in in'
+      'up up';
+
+    .background {
+      -webkit-clip-path: none;
+      clip-path: none;
+    }
+
+    .form {
+      height: initial;
+    }
+
+    ::after {
+      width: 100vw;
+      left: -20px;
+      bottom: -20px;
+    }
+  }
+}

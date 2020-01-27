@@ -1,0 +1,16 @@
+@import '../../partialStyles/colorVariables';
+@import '../../partialStyles/background';
+
+.home-page {
+  height: calc(100vh - 70px);
+
+  h1 {
+    display: inline;
+    color: #fff;
+    background-color: rgba(#000, 0.4);
+  }
+
+  .background {
+    @include background(url('../assets/people2_background.jpg'));
+  }
+}
