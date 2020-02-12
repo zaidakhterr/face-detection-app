@@ -68,7 +68,6 @@ export class SignUpForm extends Component {
             label='name'
             value={name}
             handleChange={this.handleChange}
-            autoComplete='off'
           />
           <Input
             id='sign-up-email'
@@ -77,7 +76,6 @@ export class SignUpForm extends Component {
             label='email'
             value={email}
             handleChange={this.handleChange}
-            autoComplete='off'
           />
           <Input
             id='sign-up-password'
@@ -86,7 +84,6 @@ export class SignUpForm extends Component {
             label='password'
             value={password}
             handleChange={this.handleChange}
-            autoComplete='off'
           />
           <small>* Password must contain a number</small>
           {msg && <Alert>{msg}</Alert>}

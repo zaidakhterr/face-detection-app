@@ -66,7 +66,6 @@ export class SignInForm extends Component {
             label='email'
             value={email}
             handleChange={this.handleChange}
-            autoComplete='off'
           />
           <Input
             id='sign-in-password'
@@ -75,7 +74,6 @@ export class SignInForm extends Component {
             label='password'
             value={password}
             handleChange={this.handleChange}
-            autoComplete='off'
           />
           {msg && <Alert>{msg}</Alert>}
           <CustomButton>Sign In</CustomButton>

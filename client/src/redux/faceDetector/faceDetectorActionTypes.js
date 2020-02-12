@@ -1,0 +1,2 @@
+export const DETECT_IMAGE = 'DETECT_IMAGE';
+export const INCORRECT_URL = 'INCORRECT_URL';

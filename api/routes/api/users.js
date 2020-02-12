@@ -138,7 +138,9 @@ router.patch('/profile', auth, (req, res) => {
   const { id } = req.user;
   User.findByIdAndUpdate(id, { $inc: { entries: 1 } })
     .select('-password')
-    .then(user => res.send(user))
+    .then(user => {
+      res.send(user);
+    })
     .catch(err => console.error(err));
 });
 

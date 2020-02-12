@@ -1,6 +1,5 @@
 .face-detector {
-  border: solid red 1px;
-  background-color: rgba(#444, 0.7);
+  //background-color: rgba(#444, 0.7);
   margin: 0 auto;
   width: 100%;
   height: 100%;
@@ -8,11 +7,28 @@
   .image-box {
     position: relative;
     margin: 0 auto;
+    padding: 0;
+    background-color: #999;
     //width: 600px;
-    border: solid 1px blue;
 
     img {
-      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .face-boundary {
+      position: absolute;
+      //box-shadow: 0 0 0 2px #149df2 inset;
+      border: solid 2px #149df2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 200ms;
+
+      &:hover {
+        border-color: rgb(37, 240, 47);
+      }
     }
   }
 }
