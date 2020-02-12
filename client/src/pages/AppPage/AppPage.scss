@@ -1,0 +1,55 @@
+.app-page {
+  padding-top: 50px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'form  image'
+    'count image';
+
+  .face-detector {
+    grid-area: image;
+  }
+
+  .image-form {
+    height: 100%;
+    width: 100%;
+    grid-area: form;
+    margin: 0 auto;
+
+    p {
+      margin-top: 10px;
+      font-size: 20px;
+
+      span {
+        text-transform: capitalize;
+        font-weight: 100;
+      }
+    }
+
+    .form-group {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .app-page {
+    grid-template-rows: 0.5fr 1fr;
+    grid-template-areas:
+      'form  form'
+      'image image';
+
+    .image-form {
+      width: 95%;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import '../../partialStyles/colorVariables';
+@import '../../partialStyles/background';
+
+.home-page {
+  height: calc(100vh - 70px);
+  padding-top: 100px;
+
+  h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(#000, 0.4);
+    padding-top: 30px;
+  }
+
+  p {
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    background-color: rgba(#000, 0.4);
+    padding-bottom: 30px;
+  }
+
+  .background {
+    @include background(url('../assets/people2_background.jpg'));
+  }
+}
