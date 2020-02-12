@@ -1,0 +1,4 @@
+{
+  "MONGO_URI": "mongodb+srv://zaidakhterr:zaid1202@face-detection-e9pm3.mongodb.net/FaceDetection?retryWrites=true&w=majority",
+  "JWT_SECRET": "wo ai na"
+}

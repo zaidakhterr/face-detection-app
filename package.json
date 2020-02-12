@@ -4,14 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "api": "cd api && npm start",
+    "start": "node server",
+    "api": "nodemon server",
     "client": "cd client && npm start",
-    "start": "concurrently \"npm:api\" \"npm:client\""
+    "dev": "concurrently \"npm:api\" \"npm:client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.11"
+  },
   "devDependencies": {
+    "nodemon": "^1.19.4",
     "concurrently": "^5.0.0"
   }
 }
